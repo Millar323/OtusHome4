@@ -5,7 +5,7 @@ using System.Runtime.InteropServices.ObjectiveC;
 
 Stopwatch stopwatch1 = new Stopwatch();
 stopwatch1.Start();
-for (var i = 0; i < 10000; i++) 
+for (var i = 0; i < 10000; i++)
 {
     XML.GetStringXML();
 }
@@ -24,8 +24,25 @@ Console.WriteLine(stopwatch2.ElapsedMilliseconds);
 
 Console.ReadKey();
 
+Stopwatch stopwatch3 = new Stopwatch();
+stopwatch3.Start();
+for (var i = 0; i < 10000; i++)
+{
+    var res = Deser.Deserialise();
+}
+stopwatch3.Stop();
+Console.WriteLine(stopwatch2.ElapsedMilliseconds);
+
+Console.ReadKey();
+
 public class F
 {
     public int i1, i2, i3, i4;
     public F Get() => new F() { i1 = 1, i2 = 2, i3 = 3, i4 = 4 };
 }
+
+public class DeserialisedData
+{
+    public int i1, i2, i3, i4;
+}
+

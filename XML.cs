@@ -15,7 +15,7 @@ namespace OtusHome4
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(F));
             F f = new F().Get();
             using (FileStream fs = new FileStream("E:\\person.xml", FileMode.OpenOrCreate))
-            {
+            { 
                 xmlSerializer.Serialize(fs, f);
             }
         }
